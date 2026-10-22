@@ -1,0 +1,17 @@
+{
+  "name": "s3-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+    "tasks.max": "1",
+    "topics": "src5.BANKUSER.BANK_TRANSACTIONS",
+    "s3.bucket.name": "cdc-bankdata",
+    "store.url": "http://minio:9000",
+    "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+    "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+    "flush.size": "5000",
+    "key.converter": "io.apicurio.registry.utils.converter.AvroConverter",
+    "key.converter.apicurio.registry.url": "http://apicurio:8080/apis/registry/v2",
+    "value.converter": "io.apicurio.registry.utils.converter.AvroConverter",
+    "value.converter.apicurio.registry.url": "http://apicurio:8080/apis/registry/v2"
+  }
+}

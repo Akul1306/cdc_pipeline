@@ -1,0 +1,33 @@
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets and environment variables
+.env
+.env.*
+
+# Logs and generated test results
+*.log
+results.jtl
+
+# Generated report output
+report/content/
+
+# Dependencies (if downloaded/generated locally)
+report/sbadmin2-1.0.7/
+
+# OS and editor files
+.DS_Store
+.vscode/
+
+.kaggle/
+
+.env
+.env.*
+!.env.example
+
+analaysis/
+
+bankdataset.xlsx

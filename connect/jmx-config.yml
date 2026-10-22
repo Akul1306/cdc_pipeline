@@ -1,0 +1,23 @@
+lowercaseOutputName: true
+lowercaseOutputLabelNames: true
+rules:
+  - pattern: "debezium.([^:]+)<type=connector-metrics, context=([^,]+), server=([^,]+)><>([^:]+)"
+    name: "debezium_$2_$4"
+    labels:
+      plugin: "$1"
+      server: "$3"
+  - pattern: "kafka.connect<type=connector-task-metrics, connector=([^,]+), task=([^>]+)><>([^:]+)"
+    name: "kafka_connect_task_$3"
+    labels:
+      connector: "$1"
+      task: "$2"
+  - pattern: "kafka.connect<type=sink-task-metrics, connector=([^,]+), task=([^>]+)><>([^:]+)"
+    name: "kafka_connect_sink_$3"
+    labels:
+      connector: "$1"
+      task: "$2"
+  - pattern: "kafka.connect<type=source-task-metrics, connector=([^,]+), task=([^>]+)><>([^:]+)"
+    name: "kafka_connect_source_$3"
+    labels:
+      connector: "$1"
+      task: "$2"
