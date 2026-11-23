@@ -32,7 +32,7 @@
           <stringProp name="driver">oracle.jdbc.OracleDriver</stringProp>
           <stringProp name="initQuery"></stringProp>
           <boolProp name="keepAlive">true</boolProp>
-          <stringProp name="password">${ORACLE_PASSWORD}</stringProp>
+          <stringProp name="password">1234</stringProp>
           <stringProp name="poolMax">10</stringProp>
           <boolProp name="preinit">false</boolProp>
           <stringProp name="timeout">10000</stringProp>
@@ -122,7 +122,7 @@
           <intProp name="calcMode">1</intProp>
           <doubleProp>
             <name>throughput</name>
-            <value>3000.0</value>
+            <value>60000.0</value>
             <savedValue>0.0</savedValue>
           </doubleProp>
         </ConstantThroughputTimer>

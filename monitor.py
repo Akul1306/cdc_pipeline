@@ -37,7 +37,7 @@ kc = Consumer({
 # --- Database connections ---
 ora = oracledb.connect(
     user="bankuser",
-    password="bankpass",
+    password="1234",
     dsn="localhost:1521/XEPDB1",
 )
 
